@@ -26,8 +26,13 @@ if __name__ == "__main__":
     supervisor.load_state_dict(torch.load(pac_load_path)['state_dict'])
 
     # subsampled_dim1 and subsampled_dim2 are width_img/32 and height_img/32 approximate by excess
-    model = WSCOUNT(num_classes=1, num_maps=8, subsampled_dim1=10, subsampled_dim2=10,
-                    subsampled_t4_dim1=5, subsampled_t4_dim2=5, subsampled_t16_dim1=3, subsampled_t16_dim2=3,
+    model = WSCOUNT(num_classes=1, num_maps=8,
+                    subsampled_dim1=conf.subsampled_dim1,
+                    subsampled_dim2=conf.subsampled_dim2,
+                    subsampled_t4_dim1=conf.subsampled_dim1_t4,
+                    subsampled_t4_dim2=conf.subsampled_dim2_t4,
+                    subsampled_t16_dim1=conf.subsampled_dim1_t16,
+                    subsampled_t16_dim2=conf.subsampled_dim2_t16,
                     on_gpu=True, supervisor_model=supervisor)
 
     engine = WSCOUNT_Engine(model=model, train_set=train_set, validation_set=test_set, test_set=test_set, seed=1,

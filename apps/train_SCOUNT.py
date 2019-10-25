@@ -17,7 +17,8 @@ if __name__ == "__main__":
     log_path = save_path + '/log'
 
     # subsampled_dim1 and subsampled_dim2 are width_img/32 and height_img/32 approximate by excess
-    model = SCOUNT(num_classes=1, num_maps=8, subsampled_dim1=10, subsampled_dim2=10)
+    model = SCOUNT(num_classes=1, num_maps=8, subsampled_dim1=conf.subsampled_dim1,
+                   subsampled_dim2=conf.subsampled_dim2)
     engine = SCOUNT_Engine(model=model, train_set=train_set, validation_set=test_set, test_set=test_set, seed=1,
                            batch_size=23, save_path=save_path, log_path=log_path, num_epochs=50)
     results = engine.train_net()
