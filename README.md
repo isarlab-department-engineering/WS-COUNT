@@ -9,12 +9,12 @@ Requirements:
 1. Python 3.0 or later
 2. Pytorch 0.4 or later
 
-Usage:
+# Usage
 add parameters values on configs.py file with dataset path, models path ect..
 
 launch script "apps/train_PAC.py" for train PAC Models, "apps/train_SCOUNT.py" for SCOUNT model and "apps/train_WSCOUNT.py".
 
-Dataset:
+# Dataset
 
 you can download custom fruit counting datasets [here](http://www.sira.diei.unipg.it/) # TODO
 
