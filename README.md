@@ -18,7 +18,7 @@ launch script "apps/train_PAC.py" for train PAC Models, "apps/train_SCOUNT.py" f
 
 you can download custom fruit counting datasets at: 
 
-sira.diei.unipg.it/supplementary/ws-count/ISARLab_counting_dataset.tar.xz
+http://sira.diei.unipg.it/supplementary/ws-count/ISARLab_counting_dataset.tar.xz
 
 Feel free to report any issue.
 
