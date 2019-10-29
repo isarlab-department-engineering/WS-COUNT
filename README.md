@@ -6,7 +6,7 @@ Code repository for the approch described in "Weakly Supervised Fruit Counting f
 OS: Ubuntu 16.04 (other versions are not tested)
 
 Requirements:
-1. Python 3.0 or later
+1. Python 3.5 or later
 2. Pytorch 0.4 or later
 
 # Usage
